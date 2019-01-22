@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <meta http-equiv='X-UA-Compatible' content='chrome=1'>
+		<!-- Optional for animation - anime-X.css bundle with anime-X.js -->
+		<link href="https://sorrentinof.github.io/anime-X/anime-X.css" rel="stylesheet" type="text/css">
+        <style>
+			body{
+				font-family:arial;
+				background: #444;
+				color: #fff;
+				text-align: center;
+			}
+			section{width:100%; position:relative;}
+			footer a {
+				color: gold;
+				text-decoration: red underline;
+				font-weight: 900;
+				font-family: arial;
+				padding: 20px;
+				line-height: 50px;
+			}
+			/*=======================================*/
+			
+			#divCon,
+			#divCon2
+			{
+				text-align:center;
+			}
+			
+			#divCon #div,#divCon #div2,#divCon #div3,
+			#divCon #div4,#divCon #div5,#divCon #div6,
+			#divCon #div7,#divCon #div8,#divCon #div9
+			{
+				display: inline-block;
+				max-width: 30%;	
+			}
+			
+			#divCon2 #div11,#divCon2 #div12
+			{
+				display: inline-block;
+				max-width: 49%;	
+			}
+			#div11 .collage_piece,
+			#div11 .Col_Piece_Filter
+			{
+				border-radius:15%;
+			}
+			
+		</style>
+        <title>Collage-X - Example</title>
+	</head>
+	
+    <body>
+
+		<section>
+			<hr>
+			<h1>CollageX Examples</h1>
+			<hr>
+			
+			<div id="divCon" >
+				<div id="div" ></div>
+				<div id="div2" ></div>
+				<div id="div3" ></div>
+				
+				<div id="div4" ></div>
+				<div id="div5" ></div>
+				<div id="div6" ></div>
+				
+				<div id="div7" ></div>
+				<div id="div8" ></div>
+				<div id="div9" ></div>
+			</div>
+			
+		</section>
+		
+		<section>
+			<hr>
+			<h2>Full size picture (1356 x 1356)</h2>
+			<hr>
+	
+			<div id="div10" ></div>
+			
+		</section>
+		
+		<section>
+			<hr>
+			<h2>Animation</h2>
+			<hr>
+			
+			<div id="divCon2" >
+				<div id="div11" class="x-left"></div>
+				<div id="div12" class="x-right"></div>
+			</div>
+			
+		</section>
+		<footer>
+			<hr>
+			<a href="https://sorrentino.ga">Francesco Sorrentino</a>
+		</footer>
+		
+		<!-- JS / jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src='../jQuery.collage-X.js'></script>
+		
+		<!-- Optional for animation - anime-X.js bundle with anime-X.css -->
+		<script src='https://sorrentinof.github.io/anime-X/anime-X.js'></script>
+		
+		
+        <script>
+			$('#div').collagex({
+				src	  : 'img.jpg',
+				filter:'grayscale',
+				text:{ 
+					string:{},
+					orientation:'vertical-left',
+					size: '100px', 
+					color:'blue',
+					fontfamily:'arial'
+					//transform:'rotate(-45deg)'
+				},
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				transform:'rotate(45deg)',
+				x: 8,
+				y: 1, 
+				gap:20
+			});
+		
+			$('#div2').collagex({
+				src	  : 'img.jpg',
+				filter:'grayscale',
+				text:{ 
+					string:{},
+					size: '100px', 
+					color:'#000000',
+					fontfamily:'arial'
+				},
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				transform:'rotate(0deg)',
+				x: 1,
+				y: 8, 
+				gap:20
+			});
+			
+			$('#div3').collagex({
+				<!-- src	  : 'http://lorempixel.com/600/540', -->
+				src	  : 'img.jpg',
+				filter:'blur',
+				text:{ 
+					string:{},
+					orientation:'vertical-right',
+					size: '100px', 
+					color:'#444444',
+					fontfamily:'arial'
+				},
+				method: 'link',
+				alink:{},
+				transform:'rotate(-45deg)',
+				maxWidth: 500,
+				maxHeight: 500,
+				x: 8,
+				y: 1, 
+				gap:20
+			});
+			
+			
+			$('#div4').collagex({
+				src	  : 'img.jpg',
+				filter:'sepia',
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				transform:'rotate(45deg)',
+				background:'#444444',
+				x: 8,
+				y: 8, 
+				gap:20
+			});
+			
+			$('#div5').collagex({
+				src	  : 'img.jpg',
+				filter:'grayscale',
+				text:{ 
+					string:{},
+					size: '50px', 
+					color:'red',
+					fontfamily:'arial'
+				},
+				background:'red',
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				x: 4,
+				y: 4, 
+				gap:20
+			});
+			
+			$('#div6').collagex({
+				<!-- src	  : 'http://lorempixel.com/600/540', -->
+				src	  : 'img.jpg',
+				filter:'blur',
+				transform:'rotate(-45deg)',
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				x: 8,
+				y: 8, 
+				gap:20
+			});
+			//==============================================================================
+			//Full Size
+			$('#div10').collagex({
+				name  : 'MainTest',
+				src	  : 'img.jpg',
+				filter:'sepia',
+				text:{
+					string:{ //total number of text must be = x + y else will be undefined 
+						'1':'Google',
+						'2':'Github',
+						'3':'Yahoo',
+						'4':'Bing'
+					},
+					position:'middle',
+					scale: false,
+					size: '6vw', // = fon-size: number + unit measure; =>  50px || 3pc || 5vw || 300% ... string
+					uppercase: true,
+					bold: true,
+					fontfamily:'arial',
+					color:'#444444',
+					transform:'rotate(-45deg)'
+				},
+				method: 'link',
+				alink:{ //total number of links must be = x + y else will be undefined 
+					'1': 'http://google.com',
+					'2': 'http://github.com',
+					'3': 'http://yahoo.com',
+					'4': 'http://bing.com'
+				},
+				background:'gold',
+				transform:'rotate(45deg)',
+				transition:'all 200ms ease-in-out',
+				x:2, // Columns 
+				y:2, // Rows
+				gap: {
+					x: 20,
+					y: 20
+				}
+				//gap:20
+			});
+			//==============================================================================
+			//Animation
+			$('#div11').collagex({
+				<!-- src	  : 'http://lorempixel.com/600/540', -->
+				src	  : 'img.jpg',
+				filter:'blur',
+				transform:'rotate(-45deg)',
+				method: 'link',
+				alink:{},
+				maxWidth: 500,
+				maxHeight: 500,
+				background:'blue',
+				animationPiece:{
+					hover:'lightSpeedOut 0.5s',
+					onLoadType:'from-last',
+					onLoadAnimation:'flipOutX 1s',
+					onLoadDelay:50
+				},
+				x:10,
+				y: 10, 
+				gap:0
+			});
+			
+			$('#div12').collagex({
+				src	  : 'img.jpg',
+				filter:'grayscale',
+				text:{ 
+					string:{
+						'1':'title 1',
+						'2':'title 2',
+						'3':'title 3',
+						'4':'title 4',
+						'5':'title 5',
+						'6':'title 6',
+						'7':'title 7',
+						'8':'title 8'
+					},
+					orientation:'vertical-left',
+					size: '100px', 
+					color:'blue',
+					fontfamily:'arial'
+				},
+				method: 'link',
+				alink:{},
+				animationPiece:{
+					hover:'rubberBand 0.5s',
+					onLoadType:'from-first',
+					onLoadAnimation:'bounce 0.5s',
+					onLoadDelay:50
+				},
+				maxWidth: 500,
+				maxHeight: 500,
+				x: 8,
+				y: 1, 
+				gap:20
+			});
+		</script>
+		
+	</body>
+</html>

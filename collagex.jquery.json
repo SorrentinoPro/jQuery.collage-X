@@ -1,0 +1,42 @@
+{
+    "name": "collage-x",
+    "title": "jQuery Collage-X",
+    "description": "Slice images into pieces, set a gap, max sizes, maintain ratio of real image size within containers, scale fully responsive, add animations, text, links, colors, background and more easy, intuitive and fully customizable.",
+    "keywords": [
+        "image",
+        "images",
+        "piece",
+        "pieces",
+        "tile",
+        "tiles",
+        "menu",
+        "menus",
+        "link",
+        "links",
+        "scale",
+        "responsive",
+        "animation",
+        "design",
+        "projectx",
+        "project-x",
+        "sorrentino",
+        "francesco"
+    ],
+    "version": "0.1",
+    "author": {
+        "name": "Sorrentino Francesco",
+        "email": "francesco@sorrentino.ga",
+        "url": "https://github.com/sorrentinof"
+    },
+    "licenses": [{
+            "type": "GNU",
+            "url": "https://github.com/sorrentinof/jQuery.collage-X/blob/master/LICENSE"
+    }],
+    "homepage": "http://sorrentinof.github.com/jquery.collage-X.js",
+    "demo": "http://sorrentinof.github.com/jquery.collage-X.js",
+    "docs": "https://github.com/sorrentinof/jquery.collage-X.js",
+    "bugs": "https://github.com/sorrentinof/jquery.collage-X.js/issues",
+    "dependencies": {
+        "jQuery": ">=1.8"
+    }
+}
